@@ -5,14 +5,19 @@
 using namespace std;
 int main()
 {
-	Mino * mino_ptr;
-
-	srandom(time(NULL));
-	for(int i = 0; i < 3; ++i)
+	try
 	{
-		mino_ptr = genMino();
-		mino_ptr->paint();
-		delete mino_ptr;
+		Mino * mino_ptr;
+
+		srandom(time(NULL));
+		for(int i = 0; i < 100; ++i)
+		{
+			mino_ptr = genMino();
+		}
 	}
+		catch(bad_alloc & memoryAlloc)
+		{
+			cerr << "Exception happend: " << memoryAlloc.what() << endl;
+		}
 	return 0;
 }

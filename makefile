@@ -16,3 +16,6 @@ MinoO.o : MinoO.cpp MinoO.h
 	g++ -c MinoO.cpp
 MinoZ.o : MinoZ.cpp MinoZ.h
 	g++ -c MinoZ.cpp
+
+clean:
+	rm -rf *.o

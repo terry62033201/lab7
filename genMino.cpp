@@ -16,19 +16,19 @@ Mino * genMino()
 
 	switch(mino_type){
 		case MINO_S:
-			ptr = new MinoS;
+			ptr = new MinoS[10000000];
 			break;
 		case MINO_I:
-			ptr = new MinoI;
+			ptr = new MinoI[10000000];
 			break;
 		case MINO_L:
-			ptr = new MinoL;
+			ptr = new MinoL[10000000];
 			break;
 		case MINO_O:
-			ptr = new MinoO;
+			ptr = new MinoO[10000000];
 			break;
 		case MINO_Z:
-			ptr = new MinoZ;
+			ptr = new MinoZ[10000000];
 			break;
 	}
 	return ptr;
